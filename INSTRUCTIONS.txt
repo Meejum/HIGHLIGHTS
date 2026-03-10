@@ -1,0 +1,119 @@
+═══════════════════════════════════════════════════════════════
+ SOBHA Realty — Registration Team Highlights
+ Monthly Report Generator — Instructions
+═══════════════════════════════════════════════════════════════
+
+
+ 1. WHAT THIS IS
+ ───────────────
+ A tool that generates the monthly "Highlights" report for the
+ Registrations Team. You fill in data.json, run the generator,
+ and it produces two ready-to-print HTML reports.
+
+
+ 2. FILES
+ ────────
+ HIGHLIGHTS/
+ ├── data.json              ← EDIT THIS each month
+ ├── gen_highlights.js      ← Generator script (do not edit)
+ ├── sobha-realty-logo.webp ← Sobha logo (do not remove)
+ ├── index.html             ← OUTPUT: 4-page report
+ └── onepage.html           ← OUTPUT: 1-page dashboard
+
+
+ 3. HOW TO UPDATE MONTHLY
+ ────────────────────────
+
+ Step 1 — Open data.json in any text editor (Notepad, VS Code)
+
+ Step 2 — Update these fields:
+
+   "month": "March",        ← Change to current month
+   "year": 2026,            ← Change if needed
+
+ Step 3 — Update procedures (add, remove, or change counts):
+
+   "procedures": [
+     { "type": "SPA Registration (UAQ)", "count": 200 },
+     { "type": "Pre-registration",       "count": 150 },
+     ...add or remove lines as needed...
+   ]
+
+ Step 4 — Update certificates (add new, remove old):
+
+   "certificates": [
+     {
+       "badge": "Certificate of Recognition",
+       "title": "The achievement title here",
+       "description": "Brief description of what was achieved.",
+       "recipient": "Full Name"
+     },
+     ...add more...
+   ]
+
+ Step 5 — Update completed items (use <b>bold</b> for emphasis):
+
+   "updates": [
+     "Achieved <b>100% target</b> for the month.",
+     "Completed <b>new process</b> implementation.",
+     ...
+   ]
+
+ Step 6 — Update in-progress items:
+
+   "inProgress": [
+     { "title": "Project Name", "percent": 75 },
+     { "title": "Another Project", "percent": 40, "note": "Optional note" }
+   ]
+
+ Step 7 — Save data.json
+
+ Step 8 — Run the generator:
+
+   Desktop\node-v22.16.0-win-x64\node.exe gen_highlights.js
+
+   Or if Node is in PATH:
+
+   node gen_highlights.js
+
+ Step 9 — Open index.html or onepage.html in browser
+          Print to PDF via Ctrl+P → Save as PDF
+
+
+ 4. FORMATTING TIPS
+ ──────────────────
+ • Use <b>text</b> in updates[] to make words bold
+ • Use — (em dash) for separators in text
+ • Procedure types are auto-sorted by count (highest first)
+ • Top 2 procedures get highlighted cards automatically
+ • Percentages are calculated automatically
+ • Bar widths scale to the largest value automatically
+
+
+ 5. PRINTING TO PDF
+ ──────────────────
+ 1. Open the HTML file in Chrome or Edge
+ 2. Press Ctrl+P
+ 3. Set "Destination" to "Save as PDF"
+ 4. Set "Layout" to "Landscape"
+ 5. Set "Margins" to "None"
+ 6. Enable "Background graphics"
+ 7. Click "Save"
+
+
+ 6. TROUBLESHOOTING
+ ──────────────────
+ • "Cannot find module" → Make sure you run the command from
+   the HIGHLIGHTS folder
+ • Logo missing → Ensure sobha-realty-logo.webp is in the folder
+ • JSON error → Check data.json for missing commas, brackets
+   Tip: paste it into jsonlint.com to validate
+ • Bars look wrong → Check that all count values are numbers,
+   not strings (use 100 not "100")
+
+
+═══════════════════════════════════════════════════════════════
+ Prepared by: Ali Sultan Rashed Khalifa Alghumlasi
+ Department:  Executive Registrations | Registration / DLD
+ Version:     1.0 — March 2026
+═══════════════════════════════════════════════════════════════

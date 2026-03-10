@@ -1,0 +1,68 @@
+{
+  "month": "February",
+  "year": 2026,
+  "team": "Registrations Team",
+  "department": "Executive Registrations",
+  "division": "Registration / DLD",
+
+  "procedures": [
+    { "type": "SPA Registration (UAQ)", "count": 192 },
+    { "type": "Pre-registration",       "count": 181 },
+    { "type": "Resale",                  "count": 100 },
+    { "type": "Termination",             "count": 54  },
+    { "type": "Ideas",                   "count": 51  },
+    { "type": "Title Transfer",          "count": 48  },
+    { "type": "Internal Cancellation",   "count": 22  },
+    { "type": "Mortgage",                "count": 2   }
+  ],
+
+  "certificates": [
+    {
+      "badge": "Certificate of Recognition",
+      "title": "Fully Automating the Ownership Change Workflow in Salesforce",
+      "description": "End-to-end automation of ownership change workflows within the Salesforce platform, eliminating manual processing steps.",
+      "recipient": "Mr Ummer Farhan"
+    },
+    {
+      "badge": "Certificate of Recognition",
+      "title": "Automating the Title Deed Process Through BRD",
+      "description": "Streamlined title deed processing through Business Requirements Documentation, accelerating turnaround times.",
+      "recipient": "Mr Ummer Farhan"
+    },
+    {
+      "badge": "Certificate of Recognition",
+      "title": "Automating Pre-Registration Workflows Through BRD",
+      "description": "Reduced manual effort and improved process efficiency through automated pre-registration workflows.",
+      "recipient": "Mr Ummer Farhan"
+    },
+    {
+      "badge": "Certificate of Recognition",
+      "title": "24 Ideas Initiative",
+      "description": "Outstanding contribution to the ideas programme with 24 innovative improvement ideas submitted.",
+      "recipient": "Hassna El Hajji"
+    },
+    {
+      "badge": "Outstanding Achievement",
+      "title": "Highest Number of Ideas — 32 Ideas Submitted in 15 Minutes",
+      "description": "Achieved the highest number of ideas — 32 ideas submitted in 15 minutes — exceeding the average contribution of the CRM and Collections teams by 10%. Recognized with a gift from BE for exceptional creative output and initiative.",
+      "recipient": "Hassna El Hajji"
+    }
+  ],
+
+  "updates": [
+    "Achieved <b>100% of the annual ideas target</b> by February, with two ideas submitted per employee — now exceeding the target.",
+    "Activated <b>registrations@sobharealty.com</b> for all customer communications.",
+    "Implemented a <b>consolidated report</b> capturing all registration processes, transactions, and payments.",
+    "<b>Reconciliation and audit</b> for all Sobha projects — <b>33,511 units</b> reviewed.",
+    "Conducted <b>reconciliation of resale units</b> with CRM (2025–2026).",
+    "<b>Site Visits</b> for Completed and Off-Plan Projects.",
+    "<b>External audit</b> of workplace and environmental compliance — following up with three companies."
+  ],
+
+  "inProgress": [
+    { "title": "Multilingual Customer Registration Digital Handbook", "percent": 90 },
+    { "title": "RVS Complaint Tracker",                              "percent": 90 },
+    { "title": "Live Escalation Matrices",                           "percent": 60, "note": "Awaiting required information from stakeholders" },
+    { "title": "Resale Through ONE Sobha App",                       "percent": 60 }
+  ]
+}

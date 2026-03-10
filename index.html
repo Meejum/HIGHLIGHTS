@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Highlights – February 2026 — SOBHA Realty Registrations Team</title>
 <style>
+  
   @page { size: A4 landscape; margin: 0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  
   :root {
     --sr-black: #000;
     --sr-dark-brown: #5C3D1E;
@@ -22,8 +24,6 @@
     --sr-muted: #AAA;
     --sr-desc: #444;
     --sr-secondary: #666;
-    --page-w: 297mm;
-    --page-h: 210mm;
   }
   html { font-size: 10.5pt; }
   body {
@@ -33,781 +33,396 @@
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+  @media print { body { background: white; } .page { margin: 0; box-shadow: none; } }
 
   .page {
-    width: var(--page-w); height: var(--page-h);
+    width: 297mm; height: 210mm;
     margin: 10mm auto;
     position: relative; overflow: hidden;
     page-break-after: always;
     box-shadow: 0 8px 40px rgba(0,0,0,0.18);
   }
-  @media print {
-    body { background: white; }
-    .page { margin: 0; box-shadow: none; }
-  }
 
-  /* ══════════════════════════════════════
-     PAGE 1 — COVER
-     ══════════════════════════════════════ */
+  /* Cover */
   .cover {
     width: 100%; height: 100%;
     background: #fff;
     color: var(--sr-black);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; position: relative;
   }
+  .cover-border-top, .cover-border-bottom {
+    position: absolute; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--sr-bronze), var(--sr-light-bronze), var(--sr-bronze), transparent);
+  }
+  .cover-border-top { top: 0; }
+  .cover-border-bottom { bottom: 0; }
   .cover-logo { position: absolute; top: 18mm; right: 24mm; }
   .cover-logo img { height: 38px; }
+  .cover-line { height: 1px; background: linear-gradient(90deg, transparent, var(--sr-bronze), transparent); margin: 0 auto; }
+  .cover h1 { font-size: 32pt; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 5mm; }
+  .cover .cover-sub { font-size: 13pt; color: var(--sr-bronze); letter-spacing: 3px; font-weight: 500; margin-bottom: 12mm; }
+  .cover-stats { display: grid; grid-template-columns: repeat(4, auto); gap: 4mm 14mm; text-align: center; margin-bottom: 14mm; }
+  .cover-stats .cs-label { font-size: 9pt; color: var(--sr-bronze); font-weight: 500; }
+  .cover-stats .cs-val { font-size: 9pt; font-weight: 700; }
+  .cover-dept { font-size: 9pt; color: var(--sr-bronze); letter-spacing: 1.5px; }
+  .cover-info { font-size: 8pt; color: var(--sr-secondary); margin-top: 1.5mm; }
+  .cover-conf { font-size: 7pt; color: var(--sr-muted); margin-top: 1.5mm; }
 
-  .cover-line1 {
-    width: 60mm; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--sr-bronze), transparent);
-    margin-bottom: 12mm;
-  }
-  .cover h1 {
-    font-size: 32pt;
-    font-weight: 700;
-    color: var(--sr-black);
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-bottom: 5mm;
-  }
-  .cover .cover-sub {
-    font-size: 13pt;
-    color: var(--sr-bronze);
-    letter-spacing: 3px;
-    font-weight: 500;
-    margin-bottom: 12mm;
-  }
-  .cover-line2 {
-    width: 40mm; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--sr-light-bronze), transparent);
-    margin-bottom: 12mm;
-  }
-
-  .cover-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 4mm 14mm;
-    text-align: center;
-    margin-bottom: 14mm;
-  }
-  .cover-stats-grid .cs-label {
-    font-size: 9pt;
-    color: var(--sr-bronze);
-    font-weight: 500;
-  }
-  .cover-stats-grid .cs-val {
-    font-size: 9pt;
-    color: var(--sr-black);
-    font-weight: 700;
-  }
-
-  .cover-line3 {
-    width: 40mm; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--sr-light-bronze), transparent);
-    margin-bottom: 10mm;
-  }
-  .cover-dept {
-    font-size: 9pt;
-    color: var(--sr-bronze);
-    letter-spacing: 1.5px;
-  }
-  .cover-date {
-    font-size: 8pt;
-    color: var(--sr-secondary);
-    margin-top: 1.5mm;
-  }
-  .cover-conf {
-    font-size: 7pt;
-    color: var(--sr-muted);
-    margin-top: 1.5mm;
-    letter-spacing: 0.5px;
-  }
-  .cover-border-top {
-    position: absolute; top: 0; left: 0;
-    width: 100%; height: 3px;
-    background: linear-gradient(90deg, transparent, var(--sr-bronze), var(--sr-light-bronze), var(--sr-bronze), transparent);
-  }
-  .cover-border-bottom {
-    position: absolute; bottom: 0; left: 0;
-    width: 100%; height: 3px;
-    background: linear-gradient(90deg, transparent, var(--sr-bronze), var(--sr-light-bronze), var(--sr-bronze), transparent);
-  }
-
-  /* ══════════════════════════════════════
-     INNER PAGES
-     ══════════════════════════════════════ */
-  .inner {
-    width: 100%; height: 100%;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  /* Header bar */
-  .pg-bar {
-    display: flex;
-    align-items: center;
-    padding: 4mm 8mm 3mm;
-    border-bottom: 0.5px solid var(--sr-light-bronze);
-  }
-  .pg-bar .bar-left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .pg-bar .bar-section {
-    font-size: 10pt;
-    color: var(--sr-black);
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .pg-bar .bar-divider {
-    width: 1px; height: 24px;
-    background: var(--sr-light-bronze);
-    opacity: 0.6;
-  }
-  .pg-bar .bar-sub {
-    font-size: 7.5pt;
-    color: var(--sr-secondary);
-    letter-spacing: 0.5px;
-  }
-  .pg-bar .bar-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .pg-bar .bar-date {
-    font-size: 7.5pt;
-    color: var(--sr-secondary);
-  }
+  /* Inner pages */
+  .inner { width: 100%; height: 100%; background: #fff; display: flex; flex-direction: column; position: relative; }
+  .pg-bar { display: flex; align-items: center; padding: 4mm 8mm 3mm; border-bottom: 0.5px solid var(--sr-light-bronze); }
+  .pg-bar .bar-left { flex: 1; display: flex; align-items: center; gap: 10px; }
+  .pg-bar .bar-section { font-size: 10pt; color: var(--sr-black); letter-spacing: 1.5px; font-weight: 700; text-transform: uppercase; }
+  .pg-bar .bar-divider { width: 1px; height: 24px; background: var(--sr-light-bronze); opacity: 0.6; }
+  .pg-bar .bar-sub { font-size: 7.5pt; color: var(--sr-secondary); }
+  .pg-bar .bar-right { display: flex; align-items: center; gap: 10px; }
+  .pg-bar .bar-date { font-size: 7.5pt; color: var(--sr-secondary); }
   .pg-bar .bar-logo img { height: 22px; }
+  .pg-main { flex: 1; padding: 6mm 8mm 4mm; display: flex; flex-direction: column; }
+  .pg-footer { position: absolute; bottom: 0; left: 0; right: 0; padding: 2mm 8mm 3mm; border-top: 0.5px solid var(--sr-amenity-border); display: flex; justify-content: space-between; font-size: 5pt; color: var(--sr-muted); letter-spacing: 0.4px; }
 
-  /* Main content area */
-  .pg-main {
-    flex: 1;
-    padding: 6mm 8mm 4mm;
-    display: flex;
-    flex-direction: column;
-  }
+  .sec-head { display: flex; align-items: center; gap: 10px; margin-bottom: 5mm; }
+  .sec-head .sec-marker { width: 8px; height: 8px; border: 1.5px solid var(--sr-bronze); border-radius: 2px; flex-shrink: 0; }
+  .sec-head h2 { font-size: 15pt; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 
-  /* Section heading */
-  .sec-head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5mm;
-  }
-  .sec-head .sec-marker {
-    width: 8px; height: 8px;
-    border: 1.5px solid var(--sr-bronze);
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-  .sec-head h2 {
-    font-size: 15pt;
-    font-weight: 700;
-    color: var(--sr-black);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  /* Footer */
-  .pg-footer {
-    padding: 2mm 8mm 3mm;
-    border-top: 0.5px solid var(--sr-amenity-border);
-    display: flex;
-    justify-content: space-between;
-    font-size: 5pt;
-    color: var(--sr-muted);
-    letter-spacing: 0.4px;
-  }
-
-  /* ══════════════════════════════════════
-     PAGE 2 — PROCEDURES
-     ══════════════════════════════════════ */
-  .hero-row {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 4mm;
-  }
-  .hero-row .big {
-    font-size: 48pt;
-    font-weight: 700;
-    color: var(--sr-bronze);
-    line-height: 1;
-  }
-  .hero-row .big-label {
-    font-size: 10pt;
-    color: var(--sr-secondary);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  /* Cards grid */
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3mm;
-    margin-bottom: 4mm;
-  }
-  .c-card {
-    background: #fff;
-    border: 1px solid var(--sr-card-border);
-    border-radius: 4px;
-    padding: 10px 12px;
-    text-align: center;
-    position: relative;
-  }
-  .c-card.top {
-    background: var(--sr-warm-bg);
-    border-color: var(--sr-border-bronze);
-  }
-  .c-card .cc-num {
-    font-size: 24pt;
-    font-weight: 700;
-    color: var(--sr-black);
-    line-height: 1;
-    margin-bottom: 3px;
-  }
+  /* Procedures */
+  .hero-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4mm; }
+  .hero-row .big { font-size: 48pt; font-weight: 700; color: var(--sr-bronze); line-height: 1; }
+  .hero-row .big-lbl { font-size: 10pt; color: var(--sr-secondary); text-transform: uppercase; letter-spacing: 2px; }
+  .cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-bottom: 4mm; }
+  .c-card { background: #fff; border: 1px solid var(--sr-card-border); border-radius: 4px; padding: 10px 12px; text-align: center; }
+  .c-card.top { background: var(--sr-warm-bg); border-color: var(--sr-border-bronze); }
+  .c-card .cc-num { font-size: 24pt; font-weight: 700; line-height: 1; margin-bottom: 3px; }
   .c-card.top .cc-num { color: var(--sr-dark-brown); }
-  .c-card .cc-label {
-    font-size: 7pt;
-    color: var(--sr-label);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    line-height: 1.3;
-  }
-  .c-card .cc-pct {
-    font-size: 6.5pt;
-    color: var(--sr-bronze);
-    margin-top: 2px;
-    font-weight: 500;
-  }
-
-  /* Horizontal bars */
+  .cc-label { font-size: 7pt; color: var(--sr-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.3; }
+  .cc-pct { font-size: 6.5pt; color: var(--sr-bronze); margin-top: 2px; font-weight: 500; }
   .h-bars { flex: 1; display: flex; flex-direction: column; gap: 3px; justify-content: center; }
   .h-bar { display: flex; align-items: center; }
-  .h-bar .hb-label {
-    width: 130px;
-    font-size: 7.5pt;
-    color: var(--sr-desc);
-    text-align: right;
-    padding-right: 10px;
-    flex-shrink: 0;
-    font-weight: 400;
-  }
-  .h-bar .hb-track {
-    flex: 1;
-    height: 16px;
-    background: var(--sr-warm-bg);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .h-bar .hb-fill {
-    height: 100%;
-    border-radius: 2px;
-    background: var(--sr-bronze);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 6px;
-    min-width: 24px;
-  }
-  .h-bar .hb-fill.alt { background: var(--sr-light-bronze); }
-  .h-bar .hb-fill span {
-    font-size: 6.5pt;
-    font-weight: 700;
-    color: #fff;
-  }
+  .h-bar .hb-label { width: 130px; font-size: 7.5pt; color: var(--sr-desc); text-align: right; padding-right: 10px; flex-shrink: 0; }
+  .hb-track { flex: 1; height: 16px; background: var(--sr-warm-bg); border-radius: 2px; overflow: hidden; }
+  .hb-fill { height: 100%; border-radius: 2px; background: var(--sr-bronze); display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; min-width: 24px; }
+  .hb-fill.alt { background: var(--sr-light-bronze); }
+  .hb-fill span { font-size: 6.5pt; font-weight: 700; color: #fff; }
 
-  /* ══════════════════════════════════════
-     PAGE 3 — CERTIFICATES
-     ══════════════════════════════════════ */
-  .awards-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr auto;
-    gap: 3.5mm;
-  }
-  .aw {
-    background: #fff;
-    border: 1px solid var(--sr-card-border);
-    border-radius: 4px;
-    padding: 14px 16px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  .aw::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 100%;
-    background: var(--sr-bronze);
-    border-radius: 4px 0 0 4px;
-  }
+  /* Awards */
+  .awards-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr auto; gap: 3.5mm; }
+  .aw { background: #fff; border: 1px solid var(--sr-card-border); border-radius: 4px; padding: 14px 16px; display: flex; flex-direction: column; position: relative; border-left: 3px solid var(--sr-bronze); }
   .aw.span { grid-column: 1 / -1; }
-  .aw .aw-badge {
-    font-size: 6.5pt;
-    color: var(--sr-bronze);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .aw .aw-badge .aw-dot {
-    width: 8px; height: 8px;
-    border: 1.5px solid var(--sr-bronze);
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-  .aw .aw-title {
-    font-size: 9pt;
-    font-weight: 700;
-    color: var(--sr-black);
-    line-height: 1.35;
-    margin-bottom: 4px;
-  }
-  .aw .aw-desc {
-    font-size: 7.5pt;
-    color: var(--sr-desc);
-    line-height: 1.4;
-    font-weight: 400;
-  }
-  .aw .aw-name {
-    font-size: 7.5pt;
-    color: var(--sr-secondary);
-    margin-top: auto;
-    padding-top: 6px;
-  }
+  .aw .aw-badge { font-size: 6.5pt; color: var(--sr-bronze); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .aw .aw-badge .aw-dot { width: 8px; height: 8px; border: 1.5px solid var(--sr-bronze); border-radius: 2px; }
+  .aw .aw-title { font-size: 9pt; font-weight: 700; line-height: 1.35; margin-bottom: 4px; }
+  .aw .aw-desc { font-size: 7.5pt; color: var(--sr-desc); line-height: 1.4; }
+  .aw .aw-name { font-size: 7.5pt; color: var(--sr-secondary); margin-top: auto; padding-top: 6px; }
 
-  /* ══════════════════════════════════════
-     PAGE 4 — UPDATES
-     ══════════════════════════════════════ */
-  .updates-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 5mm;
-  }
+  /* Updates */
+  .updates-grid { flex: 1; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5mm; }
   .upd-col { display: flex; flex-direction: column; gap: 2.5mm; }
-  .upd-col-head {
-    font-size: 7pt;
-    font-weight: 700;
-    color: var(--sr-bronze);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding-bottom: 2mm;
-    border-bottom: 1px solid var(--sr-amenity-border);
-    margin-bottom: 1mm;
-  }
-  .u-item {
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-    padding: 6px 10px;
-    background: var(--sr-card-bg);
-    border: 1px solid var(--sr-card-border);
-    border-radius: 3px;
-    border-left: 3px solid var(--sr-bronze);
-  }
-  .u-item .u-sq {
-    width: 6px; height: 6px;
-    border: 1px solid var(--sr-bronze);
-    border-radius: 1px;
-    flex-shrink: 0;
-    margin-top: 3px;
-  }
-  .u-item .u-txt {
-    font-size: 7.5pt;
-    color: var(--sr-desc);
-    line-height: 1.4;
-    font-weight: 400;
-  }
+  .upd-col-head { font-size: 7pt; font-weight: 700; color: var(--sr-bronze); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 2mm; border-bottom: 1px solid var(--sr-amenity-border); margin-bottom: 1mm; }
+  .u-item { display: flex; gap: 8px; align-items: flex-start; padding: 6px 10px; background: var(--sr-card-bg); border: 1px solid var(--sr-card-border); border-radius: 3px; border-left: 3px solid var(--sr-bronze); }
+  .u-item .u-sq { width: 6px; height: 6px; border: 1px solid var(--sr-bronze); border-radius: 1px; flex-shrink: 0; margin-top: 3px; }
+  .u-item .u-txt { font-size: 7.5pt; color: var(--sr-desc); line-height: 1.4; }
   .u-item .u-txt b { color: var(--sr-black); font-weight: 700; }
-
-  /* Progress */
-  .prog {
-    background: #fff;
-    border: 1px solid var(--sr-card-border);
-    border-radius: 4px;
-    padding: 8px 12px;
-  }
-  .prog-hd {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  .prog-hd .ph-title {
-    font-size: 7.5pt;
-    color: var(--sr-desc);
-    font-weight: 600;
-    line-height: 1.3;
-    max-width: 160px;
-  }
-  .prog-hd .ph-pct {
-    font-size: 14pt;
-    font-weight: 700;
-    color: var(--sr-dark-brown);
-    line-height: 1;
-  }
-  .prog-track {
-    height: 6px;
-    background: var(--sr-warm-bg);
-    border-radius: 3px;
-    overflow: hidden;
-  }
-  .prog-fill {
-    height: 100%;
-    border-radius: 3px;
-    background: linear-gradient(90deg, var(--sr-bronze), var(--sr-light-bronze));
-  }
-  .prog-note {
-    font-size: 6pt;
-    color: var(--sr-muted);
-    margin-top: 3px;
-    font-style: italic;
-  }
+  .prog { background: #fff; border: 1px solid var(--sr-card-border); border-radius: 4px; padding: 8px 12px; }
+  .prog-hd { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+  .prog-hd .ph-title { font-size: 7.5pt; color: var(--sr-desc); font-weight: 600; line-height: 1.3; max-width: 160px; }
+  .prog-hd .ph-pct { font-size: 14pt; font-weight: 700; color: var(--sr-dark-brown); line-height: 1; }
+  .prog-track { height: 6px; background: var(--sr-warm-bg); border-radius: 3px; overflow: hidden; }
+  .prog-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--sr-bronze), var(--sr-light-bronze)); }
+  .prog-note { font-size: 6pt; color: var(--sr-muted); margin-top: 3px; font-style: italic; }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════
-     PAGE 1 — COVER (Brochure Style)
-     ═══════════════════════════════════════════ -->
+<!-- PAGE 1 — COVER -->
 <div class="page">
   <div class="cover">
     <div class="cover-border-top"></div>
-    <div class="cover-logo"><img src="sobha-realty-logo.webp" alt="SOBHA Realty"></div>
-
-    <div class="cover-line1"></div>
+    <div class="cover-logo"><img src="data:image/webp;base64,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" alt="SOBHA Realty"></div>
+    <div class="cover-line" style="width:60mm;margin-bottom:12mm;"></div>
     <h1>Highlights</h1>
     <div class="cover-sub">February 2026</div>
-    <div class="cover-line2"></div>
-
-    <div class="cover-stats-grid">
+    <div class="cover-line" style="width:40mm;margin-bottom:12mm;"></div>
+    <div class="cover-stats">
       <span class="cs-label">Total Procedures</span>
       <span class="cs-val">650</span>
       <span class="cs-label">Certificates</span>
       <span class="cs-val">5</span>
       <span class="cs-label">Ideas Submitted</span>
       <span class="cs-val">51</span>
-      <span class="cs-label">Units Audited</span>
-      <span class="cs-val">33,511</span>
+      <span class="cs-label">Key Updates</span>
+      <span class="cs-val">11</span>
     </div>
-
-    <div class="cover-line3"></div>
+    <div class="cover-line" style="width:40mm;margin-bottom:10mm;"></div>
     <div class="cover-dept">Registrations Team &bull; Registration / DLD</div>
-    <div class="cover-date">Executive Registrations</div>
+    <div class="cover-info">Executive Registrations</div>
     <div class="cover-conf">Internal Use Only</div>
     <div class="cover-border-bottom"></div>
   </div>
 </div>
 
-
-<!-- ═══════════════════════════════════════════
-     PAGE 2 — PROCEDURES COMPLETED
-     ═══════════════════════════════════════════ -->
+<!-- PAGE 2 — PROCEDURES -->
 <div class="page">
   <div class="inner">
     <div class="pg-bar">
-      <div class="bar-left">
-        <span class="bar-section">Highlights</span>
-        <div class="bar-divider"></div>
-        <span class="bar-sub">Registrations Team</span>
-      </div>
-      <div class="bar-right">
-        <span class="bar-date">February 2026</span>
-        <div class="bar-divider"></div>
-        <div class="bar-logo"><img src="sobha-realty-logo.webp" alt="SOBHA Realty"></div>
-      </div>
+    <div class="bar-left">
+      <span class="bar-section">Highlights</span>
+      <div class="bar-divider"></div>
+      <span class="bar-sub">Registrations Team</span>
     </div>
-
+    <div class="bar-right">
+      <span class="bar-date">February 2026</span>
+      <div class="bar-divider"></div>
+      <div class="bar-logo"><img src="data:image/webp;base64,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" alt="SOBHA Realty"></div>
+    </div>
+  </div>
     <div class="pg-main">
       <div class="sec-head">
-        <div class="sec-marker"></div>
-        <h2>Number of Procedures Completed</h2>
-      </div>
-
+    <div class="sec-marker"></div>
+    <h2>Number of Procedures Completed</h2>
+  </div>
       <div class="hero-row">
         <div class="big">650</div>
-        <div class="big-label">Total Procedures &bull; 8 Categories</div>
+        <div class="big-lbl">Total Procedures &bull; 8 Categories</div>
       </div>
-
       <div class="cards-grid">
         <div class="c-card top">
-          <div class="cc-num">192</div>
-          <div class="cc-label">SPA Registration (UAQ)</div>
-          <div class="cc-pct">29.5%</div>
-        </div>
+      <div class="cc-num">192</div>
+      <div class="cc-label">SPA Registration (UAQ)</div>
+      <div class="cc-pct">29.5%</div>
+    </div>
         <div class="c-card top">
-          <div class="cc-num">181</div>
-          <div class="cc-label">Pre-registration</div>
-          <div class="cc-pct">27.8%</div>
-        </div>
+      <div class="cc-num">181</div>
+      <div class="cc-label">Pre-registration</div>
+      <div class="cc-pct">27.8%</div>
+    </div>
         <div class="c-card">
-          <div class="cc-num">100</div>
-          <div class="cc-label">Resale</div>
-          <div class="cc-pct">15.4%</div>
-        </div>
+      <div class="cc-num">100</div>
+      <div class="cc-label">Resale</div>
+      <div class="cc-pct">15.4%</div>
+    </div>
         <div class="c-card">
-          <div class="cc-num">54</div>
-          <div class="cc-label">Termination</div>
-          <div class="cc-pct">8.3%</div>
-        </div>
+      <div class="cc-num">54</div>
+      <div class="cc-label">Termination</div>
+      <div class="cc-pct">8.3%</div>
+    </div>
         <div class="c-card">
-          <div class="cc-num">51</div>
-          <div class="cc-label">Ideas</div>
-          <div class="cc-pct">7.8%</div>
-        </div>
+      <div class="cc-num">51</div>
+      <div class="cc-label">Ideas</div>
+      <div class="cc-pct">7.8%</div>
+    </div>
         <div class="c-card">
-          <div class="cc-num">48</div>
-          <div class="cc-label">Title Transfer</div>
-          <div class="cc-pct">7.4%</div>
-        </div>
+      <div class="cc-num">48</div>
+      <div class="cc-label">Title Transfer</div>
+      <div class="cc-pct">7.4%</div>
+    </div>
         <div class="c-card">
-          <div class="cc-num">22</div>
-          <div class="cc-label">Internal Cancellation</div>
-          <div class="cc-pct">3.4%</div>
-        </div>
+      <div class="cc-num">22</div>
+      <div class="cc-label">Internal Cancellation</div>
+      <div class="cc-pct">3.4%</div>
+    </div>
         <div class="c-card">
-          <div class="cc-num">2</div>
-          <div class="cc-label">Mortgage</div>
-          <div class="cc-pct">0.3%</div>
-        </div>
+      <div class="cc-num">2</div>
+      <div class="cc-label">Mortgage</div>
+      <div class="cc-pct">0.3%</div>
+    </div>
       </div>
-
       <div class="h-bars">
         <div class="h-bar">
-          <div class="hb-label">SPA Registration (UAQ)</div>
-          <div class="hb-track"><div class="hb-fill" style="width:100%"><span>192</span></div></div>
-        </div>
+      <div class="hb-label">SPA Registration (UAQ)</div>
+      <div class="hb-track"><div class="hb-fill" style="width:100.0%"><span>192</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Pre-registration</div>
-          <div class="hb-track"><div class="hb-fill" style="width:94.3%"><span>181</span></div></div>
-        </div>
+      <div class="hb-label">Pre-registration</div>
+      <div class="hb-track"><div class="hb-fill" style="width:94.3%"><span>181</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Resale</div>
-          <div class="hb-track"><div class="hb-fill alt" style="width:52.1%"><span>100</span></div></div>
-        </div>
+      <div class="hb-label">Resale</div>
+      <div class="hb-track"><div class="hb-fill alt" style="width:52.1%"><span>100</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Termination</div>
-          <div class="hb-track"><div class="hb-fill alt" style="width:28.1%"><span>54</span></div></div>
-        </div>
+      <div class="hb-label">Termination</div>
+      <div class="hb-track"><div class="hb-fill alt" style="width:28.1%"><span>54</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Ideas</div>
-          <div class="hb-track"><div class="hb-fill alt" style="width:26.6%"><span>51</span></div></div>
-        </div>
+      <div class="hb-label">Ideas</div>
+      <div class="hb-track"><div class="hb-fill alt" style="width:26.6%"><span>51</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Title Transfer</div>
-          <div class="hb-track"><div class="hb-fill alt" style="width:25%"><span>48</span></div></div>
-        </div>
+      <div class="hb-label">Title Transfer</div>
+      <div class="hb-track"><div class="hb-fill alt" style="width:25.0%"><span>48</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Internal Cancellation</div>
-          <div class="hb-track"><div class="hb-fill alt" style="width:11.5%"><span>22</span></div></div>
-        </div>
+      <div class="hb-label">Internal Cancellation</div>
+      <div class="hb-track"><div class="hb-fill alt" style="width:11.5%"><span>22</span></div></div>
+    </div>
         <div class="h-bar">
-          <div class="hb-label">Mortgage</div>
-          <div class="hb-track"><div class="hb-fill alt" style="width:2%"><span>2</span></div></div>
-        </div>
+      <div class="hb-label">Mortgage</div>
+      <div class="hb-track"><div class="hb-fill alt" style="width:1.0%"><span>2</span></div></div>
+    </div>
       </div>
     </div>
-
     <div class="pg-footer">
-      <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations</span>
-      <span>Page 2 / 4</span>
-    </div>
+    <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations</span>
+    <span>Page 2 / 4</span>
+  </div>
   </div>
 </div>
 
-
-<!-- ═══════════════════════════════════════════
-     PAGE 3 — CERTIFICATES & AWARDS
-     ═══════════════════════════════════════════ -->
+<!-- PAGE 3 — CERTIFICATES & AWARDS -->
 <div class="page">
   <div class="inner">
     <div class="pg-bar">
-      <div class="bar-left">
-        <span class="bar-section">Highlights</span>
-        <div class="bar-divider"></div>
-        <span class="bar-sub">Registrations Team</span>
-      </div>
-      <div class="bar-right">
-        <span class="bar-date">February 2026</span>
-        <div class="bar-divider"></div>
-        <div class="bar-logo"><img src="sobha-realty-logo.webp" alt="SOBHA Realty"></div>
-      </div>
+    <div class="bar-left">
+      <span class="bar-section">Highlights</span>
+      <div class="bar-divider"></div>
+      <span class="bar-sub">Registrations Team</span>
     </div>
-
+    <div class="bar-right">
+      <span class="bar-date">February 2026</span>
+      <div class="bar-divider"></div>
+      <div class="bar-logo"><img src="data:image/webp;base64,UklGRuAOAABXRUJQVlA4TNMOAAAvmEI9EE8wh7M6aooaSVJz64FevHsYgAsOHAKEovAhsLv9n5s6lkZEd3KGjsWRjs1Ld+7eeDq8vg50eLM6vOmYDhwfdSci6d81o9/8ft/fDOJGR/RfFm1bQRsd0uWY3Fh4CD4Q0c5n9F+i4aOHfxyVZfni6PGdeO/jm3clGV58YfY5/pSXzpDd3dtIfi1ZobFnZA0wgm9LHj2d6v73o/fh0e24fniI+9mUTGb4neYhWUf9dLtueAfjTckOBvyv7wpXrH++FhKDYTUYRKkl4oi1Kqyy/aWssvzrcGuQT34obDrYIyerWH1pcPx65AyP0F7hgkhrDOCUMDOUKSoTpoTb8AWV/9/mW0ZIvi1KVkhjGBesSL/43OwS1mUfK1o2HNH5bZutQH4puSFrwODG+kuzOzgrUwjPqylyp/5BUZYt5I/gpQRh52s7gxyzRye5BS+/xnnZ0/h58eTRo6OCfqHgh7s7gsHW3Qem/j4v5nkK4llJ8OSKHZWv31I7tVGmvLcbmIPcgMrnWczcD4oYwkFBHOeukl0MBeEmgxC9dgJrjBswri7Z+dOGVlDlU+OqnYhcgDKz0zJ8SDYGW7uA87JECNdbRPXQZQSvqB9n7US8mliq4eOcMHa8Ayi2tYaBrEsyG+wezwyjuFU/TA0SXuv6K2/BKhHCpLQQOMLQ95ax6Ih4Dwrv1QieuUVXHLkKbRbw33VdVvVkMRDHoaLKJHhOLEbiyLFTjix3hbMGYGu+UiJ6SSxC5wJTCZ9XdljF5UvxLv+cyAUlBlXuh06B6b3LK+05zaXcyJtqBYGDuZeVS8/BOa4tjHLmw1J+NCgbMNiZ0/ITqBIhHFfxYglYKJFU6YfNCcZ2U3XWECfhObERFOx9IA0MncQvtElyyJ6SVEtNDwXf4iZoCiLxPjMHVaSnRK+VDiviAy8BKjGJP8bvGrhDPNPjb+swrdL1HFiiuhBKLXUl1vKua6IS0mFcZRQypwQTDA0Q/JLfRB0eSwOC/cXDkNlQHewY2jpcULZArXYw8A86acAk5MkfA6Gvs05GGrV6qAPRG+YlOCVFW4bwi7Bao4WzWmZUKQNmRdLDRM9ormcGeBTuqHDhNUAlJcQkvaPRUiBKE7IiGukS+whQiRHOCQ6ZgMzWQ5oh2zkg91ZIsg4kkUOaogWNY2OXIcsckHCgOqA2d34CMnF31wBUvi0hLlMhH++ByP8U69RMdjJn73lA1cOgOv2m2icjbHdPtmu+hlMuqS9kMm9Db3EC9j+oc8UKbIInsQpyTqUL5AffJ0BnCzrLd3DLa2odYk4hwjFnPCy+nWzQlZEiabCsLEdphRPqtGUPCCU8mgoQx0wvwSlNNKVyRxhF8isqygna4c4Uu/76wZJb8SOF8sQzBs8gDdGHn71p6HVKd7wEp3T4Ww1Zc0H8ltjoHXg823qnSxp+I23pd63IYnqD3UOt4Xt4iwZSjfXhLIgGXqisbdvSQsAqPE8GdF8CeFMTOCdEYfUSnNLRMzAD7NvU4GAEjiThD5SpHHZR6vkJUOkQGgkvSxXNAn8ubE4chOHk1TZJqAxsn9wpFIrZv8qr8yxjyshgBoQb7SdApUsIOCZRpaeJ3dYE37lVNsVwS1IvWE7s45dDOALsrOielgsqQbBAtanBnFY9b09BDZYxzuxJMe4S8poKqvPmEr4Pu+yCyaudP8FSEHmWFJQQuihvIN3bDo4N4R5iOag2CX0Fp7SFdA2J2QjMZom7ssBWSFhOq20YX8EpncKueOAx+lcNCFo4zog0iWEZJDXeAlI2iaShDlDP4decThm+HtJyKZSX1Q7ecLmwO4rdQvS0NVkTRozjmLAckoPqZWJYjgAhJwApWePGDCxXyhJSoheqZEAGeeUwDAIagIwddckGV6m+cifwvowVgcYg0hLHeGPl+fUoZBaOo9wJJYRdrI4aNu4AbmWD4llhx+O214CUZNpw7c1njBQaTF2hQowi+b46x9XVgLmwWwY8If4t7Pg1hKcIhDNrwN9MsDjzixSKGTDeavrFlEoO8GvJG2KOK1/BKOmzIcg20jPOBj2lJfZvea9lE8jjR/KwwbGw2+lMocJbNwPF8arGJwuzU/rUbg2xhfANZnGQCGbLCJGN3TPFEi4RMJoMXwUJf7KmWYAkhdtfKLCNpJewCXrPvEYw+cg9HwEp2UKNt2a7gGRDaIJjZfcTM4U96LhxKucDXJF4xqmHQJRsJ32iM2dkGiCi8tf2D4TSXeGAm5zJxr3YBYyplnVYJLYVsELOVGfOjwNEtgiLKetE2Tn8PNFz90YC7BMQfewdGCVb2MeechNW8ScaLHAIz083fQOhlF1KqPJWFsv6UX1EaPZRUOSsw9uAFuq8ddM7IinSWddNQCTM6qygT2GqbDAVdtfjONaBcw6tHRBzu0KWCHFHfLl44fVZUfGYqoBY2RkFEMI7AXt+nGI+VWZN2D0gzpi775zrqyKHlsxkszUpMIMgsl3DLxBKhBDfbWXQw3KkuTTBIEloJxgS2+1CCGHdVqI6nrKpnwPGZLYb+QVCKRJ2gIvnNH2JTbs22JGkShCOTRoMa7ajsCaFSotUYtNLFaAjScXIBwIbr5ArhUeNFD1bksRFP8cP/06o2h2DyBVqeAVAKRSaSGkjDYEdDmGMqUxQYkU56R7Cz6t0yAs8ISKpMuFKXMZEHrGRI86krlfIlIjQQTKWCed4L29BGU6M3KijQDiBMEJPWCHwSQ/oTgH01V9aTCkbBMI5hBTKimImOY414JXVSAXX9aeBUJSQYMAzJklSmws6bcSZ1JUjN8IyDAYlBvsaQoWufknx6zKRZHprRzIH0cVOzCkqSCfo2j+hbKxP6RUypZZQabq/OboHbExNtLIjuRCNifwdJpScnRZk8BK9rcNdSSFyNgekUOmDpiSDYxJEce3vSMbCol5QHZ9QTkSxvZAlRHKcbO9IFsLOqDMl4ULECTgh1CRruwmmUTsQh2CCFYqYYxMyoMymxjgwNsL4z8XuIXs3FJFgEzInnRj9ZmwWAkkh7OxItISyNsaGSAh2kk8EgL3QK4RKSciVhLnIMifQhuyGtrB611/qFVIlRHjJG+bIczAJ5V3rcUxwGAKn4l1zRQl1MKKhMinyk54ip572o8qUIIdgqTNtudBnjYGftBS5oEq0VwiVIGGswVJotw4y+ooUQZ17OgDUGxvKCkiEF1INBBWW4CZXGORthUYArACXxJzq3KNAPJSGf65VcC87DPJ+TeMVIqWQhYpwAKsf26itLiNF1uS2vAKpBF06g7wfoOjLE9idtECIlSO/EBzWlhqdokbuSskv3SRWQd9ugBAftjsBMIXUGhcc4ecwVyqLxA31m5jRUrNIkQXpAwXAitMFhxm4vG6h8v0QcO9cTLFqa3JeUrVPAJxx2vqYgcsHqYlQd/eVm64FURsU4tslhcAGM5EKS1jct5DXHk3VOy6PqWl/UUjHT8eeIVIihVRyrssTW02S3tMRnBHz1MIQDgQ8jDxDrAR1WHWoKidrINZHqke1OTUftSKvyIHoIXAMOgW0poRkPi0NwC7NCLK4IX4IJaPIA3qIlm9glPIzDiltO/4GEvI297KFMJd+oSZK12NQkMsgyEEnLRJK6PDlnhruvo6y/1xWjR5Qfa16DHJ66R38ocrggZ4N0rVg/3NQwCqGMyKzRVc3NPQY5yVFMwjm9tglrNCVsWmDdREsv2KQFP/r7rhfULeFQ8J5Kjcq9kGwhg1BWFFCZ3ssu+O2/xuiSBvgyZDM9UreUtWCEsMfcsfVjiYMzmDjPQ+oSo9xNHwaOwq1ZC50oS//JbOSzRpQsqNKeOeeyjCOwqAAXAvDmXufE5cnVwnzf19I7/IkqEbK9DYRd8r816EDemVPj+YjAiVayOr5L5eP/zocfvLoiDTdU1TndU5H/s5w+OgPx123MCB+vESkRMSeJZzyhuCTIoUXZ6p5XahZUP1EOFQMlVJXpj8ohD+4l+THC/5uomA4l1+4Ip75eJyzeYq9JOQt/9HsdOA8paSvaCgBMx8nvzFrxy8i9INa8iYTvhp5wM/v5zT3F6ZyhjMV29P6+B3nXYXnI/l4Q0DNnq1NdvT5lSjyGe5QMRmgmY+//sNhvCdXlZ6D960j7jE2yo/c4fPhMI52dxh88/s7ey98fNsoPqHxP49y+6kY75hovwwf/OeD/3zwnw/+86Fyxo/eh70Ech7Pn6665rB2hJhxW5oG54Y2HeGDX5fUFO0dx91GerVEWd6AcWbNE64ANfPzxDG5c1xTlA0U+Za+AtQEu5khy1Ya1RUzEAM7jgqQsW6SMyj3aouyIYBxw5NMATLj+hFVcTfrix6GdaUuwsOpUubWbeRrBMKKH72x7qLl4MkjIhjO7ZLaUgZ2hLf7/1M7CnTtFBOJ69cN5N1Rlg5awlva9/lw4sOJd5eIQatuoKfDh5BsRVuhAuTqrLrVLKobHL4mG6fyq6359ZhaG63+Sfd1RQRj9Z5rxVaoRlRtfF1s12sZp9Kq2Nt46DSNKg87YWoUvjK1pH095nblNLceVqRG4StH1pcONaDbCFbSOvUD7XcaB4I/0c8+eOkRnVvtkny7Xj84Cj2AlRWhxGqOKUB6f6n9SD31A/3fpeDgxZEdvmT9iWT5VqgAXfhebddri19Lh7d5Sndi0WzsrD7fCrWo/MLtJuL6ISP/4poOF9af6HeyFSqypveO2uqtygwXt7La0aTIuNI5Vm/cj7i4lcSJDhj8Tpq41shiBGdVv63YChU52ZJGdUbWilzcHdrhivNPlK1GoOwpMrXWa43t/VSZ/q1bSURsogJ9oqSWGA6Hn1hd9hAOiB15tRWqUXHp4lqi6nBOIKycp6QUuag11tu3DYJTF609hYGVJQg2Lrp7CIRRRwCS0sVkH4FalTN2stxHoFblLEpnMHsI1KoTprJJl47WvsLa8lcFI0mcDw9VbcheInCMwKl1yFXBGCfW3/t0thXuIVB7+0jKuNp5SrW99hDIVQGEsutyKczeAZ0nTT5Eh13b1UnS2kegOvP4UA9P6MqI7v4BvSqEfnjP6oAvZf7LOUQA" alt="SOBHA Realty"></div>
+    </div>
+  </div>
     <div class="pg-main">
       <div class="sec-head">
-        <div class="sec-marker"></div>
-        <h2>Certificates &amp; Awards</h2>
-      </div>
-
+    <div class="sec-marker"></div>
+    <h2>Certificates &amp; Awards</h2>
+  </div>
       <div class="awards-grid">
         <div class="aw">
-          <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
-          <div class="aw-title">Fully Automating the Ownership Change Workflow in Salesforce</div>
-          <div class="aw-desc">End-to-end automation of ownership change workflows within the Salesforce platform, eliminating manual processing steps.</div>
-          <div class="aw-name">Mr Ummer Farhan</div>
-        </div>
-
+      <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
+      <div class="aw-title">Fully Automating the Ownership Change Workflow in Salesforce</div>
+      <div class="aw-desc">End-to-end automation of ownership change workflows within the Salesforce platform, eliminating manual processing steps.</div>
+      <div class="aw-name">Mr Ummer Farhan</div>
+    </div>
         <div class="aw">
-          <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
-          <div class="aw-title">Automating the Title Deed Process Through BRD</div>
-          <div class="aw-desc">Streamlined title deed processing through Business Requirements Documentation, accelerating turnaround times.</div>
-          <div class="aw-name">Mr Ummer Farhan</div>
-        </div>
-
+      <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
+      <div class="aw-title">Automating the Title Deed Process Through BRD</div>
+      <div class="aw-desc">Streamlined title deed processing through Business Requirements Documentation, accelerating turnaround times.</div>
+      <div class="aw-name">Mr Ummer Farhan</div>
+    </div>
         <div class="aw">
-          <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
-          <div class="aw-title">Automating Pre-Registration Workflows Through BRD</div>
-          <div class="aw-desc">Reduced manual effort and improved process efficiency through automated pre-registration workflows.</div>
-          <div class="aw-name">Mr Ummer Farhan</div>
-        </div>
-
+      <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
+      <div class="aw-title">Automating Pre-Registration Workflows Through BRD</div>
+      <div class="aw-desc">Reduced manual effort and improved process efficiency through automated pre-registration workflows.</div>
+      <div class="aw-name">Mr Ummer Farhan</div>
+    </div>
         <div class="aw">
-          <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
-          <div class="aw-title">24 Ideas Initiative</div>
-          <div class="aw-desc">Outstanding contribution to the ideas programme with 24 innovative improvement ideas submitted.</div>
-          <div class="aw-name">Hassna El Hajji</div>
-        </div>
-
+      <div class="aw-badge"><div class="aw-dot"></div> Certificate of Recognition</div>
+      <div class="aw-title">24 Ideas Initiative</div>
+      <div class="aw-desc">Outstanding contribution to the ideas programme with 24 innovative improvement ideas submitted.</div>
+      <div class="aw-name">Hassna El Hajji</div>
+    </div>
         <div class="aw span">
-          <div class="aw-badge"><div class="aw-dot"></div> Outstanding Achievement</div>
-          <div class="aw-title">Highest Number of Ideas &mdash; 32 Ideas Submitted in 15 Minutes</div>
-          <div class="aw-desc">Achieved the highest number of ideas &mdash; 32 ideas submitted in 15 minutes &mdash; exceeding the average contribution of the CRM and Collections teams by 10%. Recognized with a gift from BE for exceptional creative output and initiative.</div>
-          <div class="aw-name">Hassna El Hajji</div>
-        </div>
+      <div class="aw-badge"><div class="aw-dot"></div> Outstanding Achievement</div>
+      <div class="aw-title">Highest Number of Ideas — 32 Ideas Submitted in 15 Minutes</div>
+      <div class="aw-desc">Achieved the highest number of ideas — 32 ideas submitted in 15 minutes — exceeding the average contribution of the CRM and Collections teams by 10%. Recognized with a gift from BE for exceptional creative output and initiative.</div>
+      <div class="aw-name">Hassna El Hajji</div>
+    </div>
       </div>
     </div>
-
     <div class="pg-footer">
-      <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations</span>
-      <span>Page 3 / 4</span>
-    </div>
+    <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations</span>
+    <span>Page 3 / 4</span>
+  </div>
   </div>
 </div>
 
-
-<!-- ═══════════════════════════════════════════
-     PAGE 4 — KEY HIGHLIGHTS & UPDATES
-     ═══════════════════════════════════════════ -->
+<!-- PAGE 4 — KEY HIGHLIGHTS & UPDATES -->
 <div class="page">
   <div class="inner">
     <div class="pg-bar">
-      <div class="bar-left">
-        <span class="bar-section">Highlights</span>
-        <div class="bar-divider"></div>
-        <span class="bar-sub">Registrations Team</span>
-      </div>
-      <div class="bar-right">
-        <span class="bar-date">February 2026</span>
-        <div class="bar-divider"></div>
-        <div class="bar-logo"><img src="sobha-realty-logo.webp" alt="SOBHA Realty"></div>
-      </div>
+    <div class="bar-left">
+      <span class="bar-section">Highlights</span>
+      <div class="bar-divider"></div>
+      <span class="bar-sub">Registrations Team</span>
     </div>
-
+    <div class="bar-right">
+      <span class="bar-date">February 2026</span>
+      <div class="bar-divider"></div>
+      <div class="bar-logo"><img src="data:image/webp;base64,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" alt="SOBHA Realty"></div>
+    </div>
+  </div>
     <div class="pg-main">
       <div class="sec-head">
-        <div class="sec-marker"></div>
-        <h2>Other Key Highlights</h2>
-      </div>
-
+    <div class="sec-marker"></div>
+    <h2>Other Key Highlights</h2>
+  </div>
       <div class="updates-grid">
         <div class="upd-col">
           <div class="upd-col-head">Achievements &amp; Updates</div>
-
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt">Achieved <b>100% of the annual ideas target</b> by February, with two ideas submitted per employee &mdash; now exceeding the target.</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt">Achieved <b>100% of the annual ideas target</b> by February, with two ideas submitted per employee — now exceeding the target.</div>
+    </div>
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt">Activated <b>registrations@sobharealty.com</b> for all customer communications.</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt">Activated <b>registrations@sobharealty.com</b> for all customer communications.</div>
+    </div>
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt">Implemented a <b>consolidated report</b> capturing all registration processes, transactions, and payments.</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt">Implemented a <b>consolidated report</b> capturing all registration processes, transactions, and payments.</div>
+    </div>
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt"><b>Reconciliation and audit</b> for all Sobha projects &mdash; <b>33,511 units</b> reviewed.</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt"><b>Reconciliation and audit</b> for all Sobha projects — <b>33,511 units</b> reviewed.</div>
+    </div>
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt">Conducted <b>reconciliation of resale units</b> with CRM (2025&ndash;2026).</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt">Conducted <b>reconciliation of resale units</b> with CRM (2025–2026).</div>
+    </div>
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt"><b>Site Visits</b> for Completed and Off-Plan Projects.</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt"><b>Site Visits</b> for Completed and Off-Plan Projects.</div>
+    </div>
           <div class="u-item">
-            <div class="u-sq"></div>
-            <div class="u-txt"><b>External audit</b> of workplace and environmental compliance &mdash; following up with three companies.</div>
-          </div>
+      <div class="u-sq"></div>
+      <div class="u-txt"><b>External audit</b> of workplace and environmental compliance — following up with three companies.</div>
+    </div>
         </div>
-
         <div class="upd-col">
           <div class="upd-col-head">In Progress</div>
-
           <div class="prog">
-            <div class="prog-hd">
-              <div class="ph-title">Multilingual Customer Registration Digital Handbook</div>
-              <div class="ph-pct">90%</div>
-            </div>
-            <div class="prog-track"><div class="prog-fill" style="width:90%"></div></div>
-          </div>
-
+      <div class="prog-hd">
+        <div class="ph-title">Multilingual Customer Registration Digital Handbook</div>
+        <div class="ph-pct">90%</div>
+      </div>
+      <div class="prog-track"><div class="prog-fill" style="width:90%"></div></div>
+      
+    </div>
           <div class="prog">
-            <div class="prog-hd">
-              <div class="ph-title">RVS Complaint Tracker</div>
-              <div class="ph-pct">90%</div>
-            </div>
-            <div class="prog-track"><div class="prog-fill" style="width:90%"></div></div>
-          </div>
-
+      <div class="prog-hd">
+        <div class="ph-title">RVS Complaint Tracker</div>
+        <div class="ph-pct">90%</div>
+      </div>
+      <div class="prog-track"><div class="prog-fill" style="width:90%"></div></div>
+      
+    </div>
           <div class="prog">
-            <div class="prog-hd">
-              <div class="ph-title">Live Escalation Matrices</div>
-              <div class="ph-pct">60%</div>
-            </div>
-            <div class="prog-track"><div class="prog-fill" style="width:60%"></div></div>
-            <div class="prog-note">Awaiting required information from stakeholders</div>
-          </div>
-
+      <div class="prog-hd">
+        <div class="ph-title">Live Escalation Matrices</div>
+        <div class="ph-pct">60%</div>
+      </div>
+      <div class="prog-track"><div class="prog-fill" style="width:60%"></div></div>
+      <div class="prog-note">Awaiting required information from stakeholders</div>
+    </div>
           <div class="prog">
-            <div class="prog-hd">
-              <div class="ph-title">Resale Through ONE Sobha App</div>
-              <div class="ph-pct">60%</div>
-            </div>
-            <div class="prog-track"><div class="prog-fill" style="width:60%"></div></div>
-          </div>
+      <div class="prog-hd">
+        <div class="ph-title">Resale Through ONE Sobha App</div>
+        <div class="ph-pct">60%</div>
+      </div>
+      <div class="prog-track"><div class="prog-fill" style="width:60%"></div></div>
+      
+    </div>
         </div>
       </div>
     </div>
-
     <div class="pg-footer">
-      <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations</span>
-      <span>Page 4 / 4</span>
-    </div>
+    <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations</span>
+    <span>Page 4 / 4</span>
+  </div>
   </div>
 </div>
 
