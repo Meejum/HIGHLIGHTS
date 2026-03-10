@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highlights – February 2026 — SOBHA Realty Registrations Team</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --gold: #C4956A;
+    --gold-light: #e9cca9;
+    --gold-dark: #85633b;
+    --gold-deeper: #723d09;
+    --cream: #F8F4F0;
+    --dark: #1a1410;
+    --dark2: #2a2018;
+    --text: #2D2D2D;
+    --muted: #8a7d72;
+    --page-w: 297mm;
+    --page-h: 210mm;
+  }
+  html { font-size: 10.5pt; }
+  body {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: var(--text);
+    background: #d5ccc3;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: var(--page-w); height: var(--page-h);
+    margin: 10mm auto;
+    position: relative; overflow: hidden;
+    page-break-after: always;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  }
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+  }
+
+  /* ══════════════════════════════════════
+     PAGE 1 — COVER
+     ══════════════════════════════════════ */
+  .cover {
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, #0f0c09 0%, #1c1610 35%, #261e15 60%, #1c1610 100%);
+    color: white;
+    display: flex;
+    position: relative;
+  }
+
+  /* Geometric pattern overlay */
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(196,149,106,0.02) 40px, rgba(196,149,106,0.02) 42px),
+      repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(196,149,106,0.02) 40px, rgba(196,149,106,0.02) 42px);
+    pointer-events: none;
+  }
+
+  /* Gold accent corner */
+  .cover::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(196,149,106,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* Left gold strip */
+  .cover-strip {
+    width: 8px; height: 100%;
+    background: linear-gradient(180deg, var(--gold), var(--gold-deeper), var(--gold));
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 22mm 28mm 18mm 22mm;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cover-top .logo img { height: 44px; filter: brightness(1.15); }
+  .cover-month {
+    font-size: 8pt;
+    color: var(--gold-light);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border: 1px solid rgba(196,149,106,0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+
+  .cover-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cover-center .tag {
+    font-size: 8pt;
+    color: var(--gold);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .cover-center h1 {
+    font-size: 48pt;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .cover-center h1 span {
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .cover-center .divider {
+    width: 100px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 16px 0;
+  }
+  .cover-center .subtitle {
+    font-size: 15pt;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .cover-center .dept {
+    margin-top: 18px;
+    font-size: 8.5pt;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* Cover stat strip at bottom */
+  .cover-stats {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(196,149,106,0.15);
+    padding-top: 16px;
+  }
+  .c-stat {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  .c-stat:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; height: 100%;
+    width: 1px;
+    background: rgba(196,149,106,0.15);
+  }
+  .c-stat .val {
+    font-size: 30pt;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .c-stat .lbl {
+    font-size: 6.5pt;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+  }
+
+  /* Bottom gold line */
+  .cover-bottom-line {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold-deeper), var(--gold), var(--gold-light), var(--gold), var(--gold-deeper));
+  }
+
+  /* ══════════════════════════════════════
+     INNER PAGES — SHARED
+     ══════════════════════════════════════ */
+  .inner {
+    width: 100%; height: 100%;
+    background: white;
+    display: flex;
+    position: relative;
+  }
+
+  /* Left sidebar */
+  .sidebar {
+    width: 60px;
+    background: linear-gradient(180deg, var(--dark), var(--dark2));
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    position: relative;
+  }
+  .sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 2px; height: 100%;
+    background: linear-gradient(180deg, var(--gold), var(--gold-deeper), var(--gold));
+  }
+  .sidebar .s-logo img { width: 32px; filter: brightness(1.1); }
+  .sidebar .s-page {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 7pt;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: auto;
+  }
+
+  .main {
+    flex: 1;
+    padding: 12mm 18mm 10mm 16mm;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Page header */
+  .pg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6mm;
+  }
+  .pg-header .pg-title {
+    font-size: 8pt;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .pg-header .pg-date {
+    font-size: 7.5pt;
+    color: var(--muted);
+  }
+
+  /* Section heading */
+  .sec-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 6mm;
+  }
+  .sec-head .sec-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18pt;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(196,149,106,0.3);
+  }
+  .sec-head h2 {
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+  .sec-head h2 small {
+    display: block;
+    font-size: 8pt;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* Page footer */
+  .pg-footer {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 3mm 18mm 3mm 16mm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: var(--muted);
+    border-top: 1px solid rgba(196,149,106,0.12);
+  }
+
+  /* ══════════════════════════════════════
+     PAGE 2 — PROCEDURES
+     ══════════════════════════════════════ */
+  .hero-num {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 5mm;
+  }
+  .hero-num .big {
+    font-size: 56pt;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+  .hero-num .big-lbl {
+    font-size: 11pt;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Procedure cards */
+  .proc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.5mm;
+    margin-bottom: 5mm;
+  }
+  .proc-card {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 12px 14px 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(196,149,106,0.08);
+  }
+  .proc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  }
+  .proc-card.highlight {
+    background: linear-gradient(135deg, var(--dark), var(--dark2));
+    border: none;
+  }
+  .proc-card.highlight .pc-num { color: var(--gold); }
+  .proc-card.highlight .pc-label { color: rgba(255,255,255,0.7); }
+  .proc-card.highlight::before {
+    background: linear-gradient(90deg, var(--gold-light), var(--gold));
+  }
+  .pc-num {
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--gold-dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .pc-label {
+    font-size: 7pt;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+  .pc-pct {
+    font-size: 6.5pt;
+    color: var(--gold);
+    margin-top: 3px;
+    font-weight: 600;
+  }
+
+  /* Horizontal bars */
+  .h-bars { flex: 1; display: flex; flex-direction: column; gap: 3.5px; justify-content: center; }
+  .h-bar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .h-bar .hb-label {
+    width: 130px;
+    font-size: 7.5pt;
+    color: var(--text);
+    text-align: right;
+    padding-right: 10px;
+    flex-shrink: 0;
+  }
+  .h-bar .hb-track {
+    flex: 1;
+    height: 18px;
+    background: linear-gradient(90deg, rgba(196,149,106,0.06), rgba(196,149,106,0.03));
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  .h-bar .hb-fill {
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    min-width: 28px;
+    position: relative;
+  }
+  .h-bar .hb-fill.g1 { background: linear-gradient(90deg, #8B6914, var(--gold)); }
+  .h-bar .hb-fill.g2 { background: linear-gradient(90deg, var(--gold-dark), var(--gold)); }
+  .h-bar .hb-fill.g3 { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+  .h-bar .hb-fill span {
+    font-size: 7pt;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .h-bar .hb-val {
+    width: 34px;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--gold-dark);
+    text-align: right;
+    padding-left: 6px;
+  }
+
+  /* ══════════════════════════════════════
+     PAGE 3 — CERTIFICATES & AWARDS
+     ══════════════════════════════════════ */
+  .awards-layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 4mm;
+  }
+  .award {
+    background: linear-gradient(135deg, #151210, #221c15);
+    border-radius: 12px;
+    padding: 16px 18px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .award::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .award::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; right: -30px;
+    width: 100px; height: 100px;
+    background: radial-gradient(circle, rgba(196,149,106,0.08), transparent 70%);
+    pointer-events: none;
+  }
+  .award.span { grid-column: 1 / -1; }
+  .award .a-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 6.5pt;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .award .a-badge .a-star {
+    width: 22px; height: 22px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10pt;
+    color: white;
+  }
+  .award .a-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+  .award .a-name {
+    font-size: 8pt;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.5px;
+    margin-top: auto;
+  }
+  .award .a-desc {
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+
+  /* ══════════════════════════════════════
+     PAGE 4 — UPDATES
+     ══════════════════════════════════════ */
+  .updates-layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 5mm;
+  }
+  .upd-col { display: flex; flex-direction: column; gap: 3mm; }
+  .upd-col-title {
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 2mm;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 1mm;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .upd-col-title .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .upd-col-title .dot.green { background: #5ea66a; }
+
+  .upd-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 8px 12px;
+    background: var(--cream);
+    border-radius: 8px;
+    border-left: 3px solid var(--gold);
+    position: relative;
+  }
+  .upd-item .u-bullet {
+    width: 20px; height: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 8pt;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .upd-item .u-txt {
+    font-size: 8pt;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .upd-item .u-txt b { color: var(--gold-dark); }
+
+  /* Progress cards */
+  .prog-card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid rgba(196,149,106,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .prog-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+  .prog-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .prog-top .pt-title {
+    font-size: 7.5pt;
+    color: var(--text);
+    font-weight: 600;
+    line-height: 1.3;
+    max-width: 160px;
+  }
+  .prog-top .pt-pct {
+    font-size: 16pt;
+    font-weight: 700;
+    color: var(--gold-dark);
+    line-height: 1;
+  }
+  .prog-bar {
+    height: 8px;
+    background: rgba(196,149,106,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .prog-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+    position: relative;
+  }
+  .prog-bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 12px; height: 100%;
+    background: rgba(255,255,255,0.3);
+    border-radius: 0 4px 4px 0;
+  }
+  .prog-note {
+    font-size: 6.5pt;
+    color: var(--muted);
+    margin-top: 4px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 1 — COVER
+     ═══════════════════════════════════════════ -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-strip"></div>
+    <div class="cover-content">
+      <div class="cover-top">
+        <div class="logo">
+          <img src="sobha-realty-logo.webp" alt="SOBHA Realty">
+        </div>
+        <div class="cover-month">February 2026</div>
+      </div>
+
+      <div class="cover-center">
+        <div class="tag">Registrations Team</div>
+        <h1><span>Highlights</span></h1>
+        <div class="divider"></div>
+        <div class="subtitle">February 2026</div>
+        <div class="dept">Executive Registrations &nbsp;&bull;&nbsp; Registration / DLD</div>
+      </div>
+
+      <div class="cover-stats">
+        <div class="c-stat">
+          <div class="val">650</div>
+          <div class="lbl">Procedures Completed</div>
+        </div>
+        <div class="c-stat">
+          <div class="val">5</div>
+          <div class="lbl">Certificates Awarded</div>
+        </div>
+        <div class="c-stat">
+          <div class="val">51</div>
+          <div class="lbl">Ideas Submitted</div>
+        </div>
+        <div class="c-stat">
+          <div class="val">33,511</div>
+          <div class="lbl">Units Audited</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-bottom-line"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 2 — PROCEDURES COMPLETED
+     ═══════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner">
+    <div class="sidebar">
+      <div class="s-logo"><img src="sobha-realty-logo.webp" alt="S"></div>
+      <div class="s-page">Page 02 / 04</div>
+    </div>
+    <div class="main">
+      <div class="pg-header">
+        <div class="pg-title">Highlights &mdash; February 2026</div>
+        <div class="pg-date">Registrations Team</div>
+      </div>
+
+      <div class="sec-head">
+        <div class="sec-icon">#</div>
+        <h2>Number of Procedures Completed<small>8 categories &bull; February 2026</small></h2>
+      </div>
+
+      <div class="hero-num">
+        <div class="big">650</div>
+        <div class="big-lbl">Total Procedures</div>
+      </div>
+
+      <div class="proc-grid">
+        <div class="proc-card highlight">
+          <div class="pc-num">192</div>
+          <div class="pc-label">SPA Registration (UAQ)</div>
+          <div class="pc-pct">29.5%</div>
+        </div>
+        <div class="proc-card highlight">
+          <div class="pc-num">181</div>
+          <div class="pc-label">Pre-registration</div>
+          <div class="pc-pct">27.8%</div>
+        </div>
+        <div class="proc-card">
+          <div class="pc-num">100</div>
+          <div class="pc-label">Resale</div>
+          <div class="pc-pct">15.4%</div>
+        </div>
+        <div class="proc-card">
+          <div class="pc-num">54</div>
+          <div class="pc-label">Termination</div>
+          <div class="pc-pct">8.3%</div>
+        </div>
+        <div class="proc-card">
+          <div class="pc-num">51</div>
+          <div class="pc-label">Ideas</div>
+          <div class="pc-pct">7.8%</div>
+        </div>
+        <div class="proc-card">
+          <div class="pc-num">48</div>
+          <div class="pc-label">Title Transfer</div>
+          <div class="pc-pct">7.4%</div>
+        </div>
+        <div class="proc-card">
+          <div class="pc-num">22</div>
+          <div class="pc-label">Internal Cancellation</div>
+          <div class="pc-pct">3.4%</div>
+        </div>
+        <div class="proc-card">
+          <div class="pc-num">2</div>
+          <div class="pc-label">Mortgage</div>
+          <div class="pc-pct">0.3%</div>
+        </div>
+      </div>
+
+      <div class="h-bars">
+        <div class="h-bar">
+          <div class="hb-label">SPA Registration (UAQ)</div>
+          <div class="hb-track"><div class="hb-fill g1" style="width:100%"><span>192</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Pre-registration</div>
+          <div class="hb-track"><div class="hb-fill g1" style="width:94.3%"><span>181</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Resale</div>
+          <div class="hb-track"><div class="hb-fill g2" style="width:52.1%"><span>100</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Termination</div>
+          <div class="hb-track"><div class="hb-fill g2" style="width:28.1%"><span>54</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Ideas</div>
+          <div class="hb-track"><div class="hb-fill g3" style="width:26.6%"><span>51</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Title Transfer</div>
+          <div class="hb-track"><div class="hb-fill g3" style="width:25%"><span>48</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Internal Cancellation</div>
+          <div class="hb-track"><div class="hb-fill g3" style="width:11.5%"><span>22</span></div></div>
+        </div>
+        <div class="h-bar">
+          <div class="hb-label">Mortgage</div>
+          <div class="hb-track"><div class="hb-fill g3" style="width:2%"><span>2</span></div></div>
+        </div>
+      </div>
+
+      <div class="pg-footer">
+        <span>SOBHA Realty &bull; Registration Team &bull; Executive Registrations</span>
+        <span>Highlights &mdash; February 2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 3 — CERTIFICATES & AWARDS
+     ═══════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner">
+    <div class="sidebar">
+      <div class="s-logo"><img src="sobha-realty-logo.webp" alt="S"></div>
+      <div class="s-page">Page 03 / 04</div>
+    </div>
+    <div class="main">
+      <div class="pg-header">
+        <div class="pg-title">Highlights &mdash; February 2026</div>
+        <div class="pg-date">Registrations Team</div>
+      </div>
+
+      <div class="sec-head">
+        <div class="sec-icon">&#9733;</div>
+        <h2>Certificates &amp; Awards<small>5 recognitions this month</small></h2>
+      </div>
+
+      <div class="awards-layout">
+        <!-- Award 1 -->
+        <div class="award">
+          <div class="a-badge"><div class="a-star">&#9733;</div> Certificate of Recognition</div>
+          <div class="a-title">Fully Automating the Ownership Change Workflow in Salesforce</div>
+          <div class="a-desc">End-to-end automation of ownership change workflows within the Salesforce platform, eliminating manual processing steps.</div>
+          <div class="a-name">Mr Ummer Farhan</div>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="award">
+          <div class="a-badge"><div class="a-star">&#9733;</div> Certificate of Recognition</div>
+          <div class="a-title">Automating the Title Deed Process Through BRD</div>
+          <div class="a-desc">Streamlined title deed processing through Business Requirements Documentation, accelerating turnaround times.</div>
+          <div class="a-name">Mr Ummer Farhan</div>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="award">
+          <div class="a-badge"><div class="a-star">&#9733;</div> Certificate of Recognition</div>
+          <div class="a-title">Automating Pre-Registration Workflows Through BRD</div>
+          <div class="a-desc">Reduced manual effort and improved process efficiency through automated pre-registration workflows.</div>
+          <div class="a-name">Mr Ummer Farhan</div>
+        </div>
+
+        <!-- Award 4 -->
+        <div class="award">
+          <div class="a-badge"><div class="a-star">&#9670;</div> Certificate of Recognition</div>
+          <div class="a-title">24 Ideas Initiative</div>
+          <div class="a-desc">Outstanding contribution to the ideas programme with 24 innovative improvement ideas submitted.</div>
+          <div class="a-name">Hassna El Hajji</div>
+        </div>
+
+        <!-- Award 5 — Span -->
+        <div class="award span">
+          <div class="a-badge"><div class="a-star" style="background:linear-gradient(135deg,#d4a24e,#a67c3d);">&#9733;</div> Outstanding Achievement</div>
+          <div class="a-title">Highest Number of Ideas &mdash; 32 Ideas Submitted in 15 Minutes</div>
+          <div class="a-desc">Achieved the highest number of ideas &mdash; 32 ideas submitted in 15 minutes &mdash; exceeding the average contribution of the CRM and Collections teams by 10%. Recognized with a gift from BE for exceptional creative output and initiative.</div>
+          <div class="a-name">Hassna El Hajji</div>
+        </div>
+      </div>
+
+      <div class="pg-footer">
+        <span>SOBHA Realty &bull; Registration Team &bull; Executive Registrations</span>
+        <span>Highlights &mdash; February 2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 4 — KEY HIGHLIGHTS & UPDATES
+     ═══════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner">
+    <div class="sidebar">
+      <div class="s-logo"><img src="sobha-realty-logo.webp" alt="S"></div>
+      <div class="s-page">Page 04 / 04</div>
+    </div>
+    <div class="main">
+      <div class="pg-header">
+        <div class="pg-title">Highlights &mdash; February 2026</div>
+        <div class="pg-date">Registrations Team</div>
+      </div>
+
+      <div class="sec-head">
+        <div class="sec-icon">&#9670;</div>
+        <h2>Other Key Highlights<small>Achievements &amp; ongoing initiatives</small></h2>
+      </div>
+
+      <div class="updates-layout">
+        <!-- Left: Completed -->
+        <div class="upd-col">
+          <div class="upd-col-title"><div class="dot"></div> Achievements &amp; Updates</div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#10003;</div>
+            <div class="u-txt">Achieved <b>100% of the annual ideas target</b> by February, with two ideas submitted per employee &mdash; now exceeding the target.</div>
+          </div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#9993;</div>
+            <div class="u-txt">Activated <b>registrations@sobharealty.com</b> for all customer communications.</div>
+          </div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#9776;</div>
+            <div class="u-txt">Implemented a <b>consolidated report</b> capturing all registration processes, transactions, and payments.</div>
+          </div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#9745;</div>
+            <div class="u-txt"><b>Reconciliation and audit</b> for all Sobha projects &mdash; <b>33,511 units</b> reviewed.</div>
+          </div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#9745;</div>
+            <div class="u-txt">Conducted <b>reconciliation of resale units</b> with CRM (2025&ndash;2026).</div>
+          </div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#9962;</div>
+            <div class="u-txt"><b>Site Visits</b> for Completed and Off-Plan Projects.</div>
+          </div>
+
+          <div class="upd-item">
+            <div class="u-bullet">&#128270;</div>
+            <div class="u-txt"><b>External audit</b> of workplace and environmental compliance &mdash; following up with three companies.</div>
+          </div>
+        </div>
+
+        <!-- Right: In Progress -->
+        <div class="upd-col">
+          <div class="upd-col-title"><div class="dot green"></div> In Progress</div>
+
+          <div class="prog-card">
+            <div class="prog-top">
+              <div class="pt-title">Multilingual Customer Registration Digital Handbook</div>
+              <div class="pt-pct">90%</div>
+            </div>
+            <div class="prog-bar"><div class="prog-bar-fill" style="width:90%"></div></div>
+          </div>
+
+          <div class="prog-card">
+            <div class="prog-top">
+              <div class="pt-title">RVS Complaint Tracker</div>
+              <div class="pt-pct">90%</div>
+            </div>
+            <div class="prog-bar"><div class="prog-bar-fill" style="width:90%"></div></div>
+          </div>
+
+          <div class="prog-card">
+            <div class="prog-top">
+              <div class="pt-title">Live Escalation Matrices</div>
+              <div class="pt-pct">60%</div>
+            </div>
+            <div class="prog-bar"><div class="prog-bar-fill" style="width:60%"></div></div>
+            <div class="prog-note">Awaiting required information from stakeholders</div>
+          </div>
+
+          <div class="prog-card">
+            <div class="prog-top">
+              <div class="pt-title">Resale Through ONE Sobha App</div>
+              <div class="pt-pct">60%</div>
+            </div>
+            <div class="prog-bar"><div class="prog-bar-fill" style="width:60%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pg-footer">
+        <span>SOBHA Realty &bull; Registration Team &bull; Executive Registrations</span>
+        <span>Highlights &mdash; February 2026</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
