@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highlights – February 2026 — SOBHA Realty (One Page)</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sr-black: #000;
+    --sr-dark-brown: #5C3D1E;
+    --sr-bronze: #85633b;
+    --sr-light-bronze: #C5A882;
+    --sr-border-bronze: #D4B896;
+    --sr-warm-bg: #F5EDE3;
+    --sr-card-bg: #FAFAF8;
+    --sr-card-border: #D8D0C8;
+    --sr-amenity-border: #E8E0D8;
+    --sr-label: #555;
+    --sr-body-bg: #F0EBE3;
+    --sr-muted: #AAA;
+    --sr-desc: #444;
+    --sr-secondary: #666;
+  }
+  html { font-size: 10.5pt; }
+  body {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: var(--sr-black);
+    background: var(--sr-body-bg);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 297mm; height: 210mm;
+    margin: 10mm auto;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+  }
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+  }
+
+  /* ── Header ── */
+  .hdr {
+    display: flex;
+    align-items: center;
+    padding: 3.5mm 7mm 2.5mm;
+    border-bottom: 0.5px solid var(--sr-light-bronze);
+    flex-shrink: 0;
+  }
+  .hdr-left {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .hdr-title {
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--sr-black);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .hdr-sep {
+    width: 1px; height: 16px;
+    background: var(--sr-light-bronze);
+    opacity: 0.6;
+    align-self: center;
+  }
+  .hdr-sub {
+    font-size: 8pt;
+    color: var(--sr-bronze);
+    letter-spacing: 1px;
+  }
+  .hdr-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hdr-date {
+    font-size: 7pt;
+    color: var(--sr-secondary);
+    letter-spacing: 0.5px;
+  }
+  .hdr-logo img { height: 18px; }
+
+  /* ── Body Grid ── */
+  .body-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0;
+    padding: 3mm 5mm 2mm;
+    overflow: hidden;
+  }
+
+  /* ── COLUMN 1: Procedures ── */
+  .col-proc {
+    grid-row: 1 / 3;
+    padding-right: 4mm;
+    border-right: 0.5px solid var(--sr-amenity-border);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sec-label {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--sr-bronze);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 2mm;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .sec-label .sq {
+    width: 6px; height: 6px;
+    border: 1.5px solid var(--sr-bronze);
+    border-radius: 1px;
+  }
+
+  .total-line {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 2.5mm;
+  }
+  .total-line .t-num {
+    font-size: 32pt;
+    font-weight: 700;
+    color: var(--sr-bronze);
+    line-height: 1;
+  }
+  .total-line .t-lbl {
+    font-size: 7pt;
+    color: var(--sr-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Mini cards 2x4 */
+  .mini-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    margin-bottom: 2.5mm;
+  }
+  .mini {
+    background: var(--sr-card-bg);
+    border: 1px solid var(--sr-card-border);
+    border-radius: 3px;
+    padding: 5px 7px;
+    text-align: center;
+  }
+  .mini.top {
+    background: var(--sr-warm-bg);
+    border-color: var(--sr-border-bronze);
+  }
+  .mini .m-num {
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--sr-black);
+    line-height: 1;
+  }
+  .mini.top .m-num { color: var(--sr-dark-brown); }
+  .mini .m-lbl {
+    font-size: 5.5pt;
+    color: var(--sr-label);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+    margin-top: 1px;
+  }
+
+  /* Compact bars */
+  .bars { flex: 1; display: flex; flex-direction: column; gap: 1.5px; justify-content: center; }
+  .bar-r { display: flex; align-items: center; }
+  .bar-r .bl {
+    width: 90px;
+    font-size: 5.5pt;
+    color: var(--sr-desc);
+    text-align: right;
+    padding-right: 5px;
+    flex-shrink: 0;
+  }
+  .bar-r .bt {
+    flex: 1;
+    height: 10px;
+    background: var(--sr-warm-bg);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .bar-r .bf {
+    height: 100%;
+    background: var(--sr-bronze);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 4px;
+    min-width: 16px;
+  }
+  .bar-r .bf.light { background: var(--sr-light-bronze); }
+  .bar-r .bf span {
+    font-size: 5pt;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  /* ── COLUMN 2: Awards + Updates ── */
+  .col-awards {
+    grid-row: 1;
+    padding: 0 4mm;
+    border-right: 0.5px solid var(--sr-amenity-border);
+  }
+  .col-updates {
+    grid-row: 2;
+    padding: 0 4mm;
+    padding-top: 2mm;
+    border-right: 0.5px solid var(--sr-amenity-border);
+  }
+
+  /* Compact awards */
+  .aw-list { display: flex; flex-direction: column; gap: 1.5mm; }
+  .aw-item {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    padding: 4px 6px;
+    border-left: 2px solid var(--sr-bronze);
+    background: var(--sr-card-bg);
+    border-radius: 0 2px 2px 0;
+  }
+  .aw-item .aw-sq {
+    width: 5px; height: 5px;
+    border: 1px solid var(--sr-bronze);
+    border-radius: 1px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .aw-item .aw-info {
+    font-size: 6pt;
+    color: var(--sr-desc);
+    line-height: 1.35;
+  }
+  .aw-item .aw-info b { color: var(--sr-black); font-weight: 700; font-size: 6.5pt; }
+  .aw-item .aw-info .aw-who {
+    color: var(--sr-secondary);
+    font-size: 5.5pt;
+  }
+
+  /* ── COLUMN 3: Progress ── */
+  .col-progress {
+    grid-row: 1 / 3;
+    padding-left: 4mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upd-list { display: flex; flex-direction: column; gap: 1.5mm; margin-bottom: 3mm; }
+  .up-item {
+    display: flex;
+    gap: 4px;
+    align-items: flex-start;
+    font-size: 6pt;
+    color: var(--sr-desc);
+    line-height: 1.35;
+  }
+  .up-item .up-dot {
+    width: 4px; height: 4px;
+    background: var(--sr-bronze);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .up-item b { color: var(--sr-black); }
+
+  .prog-list { display: flex; flex-direction: column; gap: 2mm; flex: 1; }
+  .p-item {
+    background: #fff;
+    border: 1px solid var(--sr-card-border);
+    border-radius: 3px;
+    padding: 5px 8px;
+  }
+  .p-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  .p-top .p-name {
+    font-size: 6pt;
+    color: var(--sr-desc);
+    font-weight: 600;
+    max-width: 120px;
+    line-height: 1.25;
+  }
+  .p-top .p-pct {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--sr-dark-brown);
+    line-height: 1;
+  }
+  .p-track {
+    height: 4px;
+    background: var(--sr-warm-bg);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .p-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--sr-bronze), var(--sr-light-bronze));
+  }
+  .p-note {
+    font-size: 5pt;
+    color: var(--sr-muted);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  /* ── Footer ── */
+  .ftr {
+    flex-shrink: 0;
+    padding: 2mm 7mm;
+    border-top: 0.5px solid var(--sr-amenity-border);
+    display: flex;
+    justify-content: space-between;
+    font-size: 5pt;
+    color: var(--sr-muted);
+    letter-spacing: 0.4px;
+  }
+
+  /* Decorative top line */
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--sr-bronze), var(--sr-light-bronze), var(--sr-bronze), transparent);
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <!-- Header -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <span class="hdr-title">Highlights</span>
+      <div class="hdr-sep"></div>
+      <span class="hdr-sub">February 2026</span>
+    </div>
+    <div class="hdr-right">
+      <span class="hdr-date">Registrations Team &bull; Executive Registrations</span>
+      <div class="hdr-sep"></div>
+      <div class="hdr-logo"><img src="sobha-realty-logo.webp" alt="SOBHA Realty"></div>
+    </div>
+  </div>
+
+  <!-- 3-Column Body -->
+  <div class="body-grid">
+
+    <!-- COLUMN 1: Procedures -->
+    <div class="col-proc">
+      <div class="sec-label"><div class="sq"></div> Number of Procedures Completed</div>
+
+      <div class="total-line">
+        <div class="t-num">650</div>
+        <div class="t-lbl">Total<br>Procedures</div>
+      </div>
+
+      <div class="mini-grid">
+        <div class="mini top">
+          <div class="m-num">192</div>
+          <div class="m-lbl">SPA Reg. (UAQ)</div>
+        </div>
+        <div class="mini top">
+          <div class="m-num">181</div>
+          <div class="m-lbl">Pre-registration</div>
+        </div>
+        <div class="mini">
+          <div class="m-num">100</div>
+          <div class="m-lbl">Resale</div>
+        </div>
+        <div class="mini">
+          <div class="m-num">54</div>
+          <div class="m-lbl">Termination</div>
+        </div>
+        <div class="mini">
+          <div class="m-num">51</div>
+          <div class="m-lbl">Ideas</div>
+        </div>
+        <div class="mini">
+          <div class="m-num">48</div>
+          <div class="m-lbl">Title Transfer</div>
+        </div>
+        <div class="mini">
+          <div class="m-num">22</div>
+          <div class="m-lbl">Internal Cancel.</div>
+        </div>
+        <div class="mini">
+          <div class="m-num">2</div>
+          <div class="m-lbl">Mortgage</div>
+        </div>
+      </div>
+
+      <div class="bars">
+        <div class="bar-r"><div class="bl">SPA Reg. (UAQ)</div><div class="bt"><div class="bf" style="width:100%"><span>192</span></div></div></div>
+        <div class="bar-r"><div class="bl">Pre-registration</div><div class="bt"><div class="bf" style="width:94.3%"><span>181</span></div></div></div>
+        <div class="bar-r"><div class="bl">Resale</div><div class="bt"><div class="bf light" style="width:52.1%"><span>100</span></div></div></div>
+        <div class="bar-r"><div class="bl">Termination</div><div class="bt"><div class="bf light" style="width:28.1%"><span>54</span></div></div></div>
+        <div class="bar-r"><div class="bl">Ideas</div><div class="bt"><div class="bf light" style="width:26.6%"><span>51</span></div></div></div>
+        <div class="bar-r"><div class="bl">Title Transfer</div><div class="bt"><div class="bf light" style="width:25%"><span>48</span></div></div></div>
+        <div class="bar-r"><div class="bl">Internal Cancel.</div><div class="bt"><div class="bf light" style="width:11.5%"><span>22</span></div></div></div>
+        <div class="bar-r"><div class="bl">Mortgage</div><div class="bt"><div class="bf light" style="width:2%"><span>2</span></div></div></div>
+      </div>
+    </div>
+
+    <!-- COLUMN 2 TOP: Certificates & Awards -->
+    <div class="col-awards">
+      <div class="sec-label"><div class="sq"></div> Certificates &amp; Awards</div>
+      <div class="aw-list">
+        <div class="aw-item">
+          <div class="aw-sq"></div>
+          <div class="aw-info"><b>Fully Automating the Ownership Change Workflow in Salesforce</b><br><span class="aw-who">Mr Ummer Farhan</span></div>
+        </div>
+        <div class="aw-item">
+          <div class="aw-sq"></div>
+          <div class="aw-info"><b>Automating the Title Deed Process Through BRD</b><br><span class="aw-who">Mr Ummer Farhan</span></div>
+        </div>
+        <div class="aw-item">
+          <div class="aw-sq"></div>
+          <div class="aw-info"><b>Automating Pre-Registration Workflows Through BRD</b><br><span class="aw-who">Mr Ummer Farhan</span></div>
+        </div>
+        <div class="aw-item">
+          <div class="aw-sq"></div>
+          <div class="aw-info"><b>24 Ideas Initiative</b><br><span class="aw-who">Hassna El Hajji</span></div>
+        </div>
+        <div class="aw-item">
+          <div class="aw-sq"></div>
+          <div class="aw-info"><b>32 Ideas in 15 Minutes</b> &mdash; Highest number of ideas, exceeding CRM &amp; Collections teams by 10%. Recognized with a gift from BE.<br><span class="aw-who">Hassna El Hajji</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMN 2 BOTTOM: Key Updates -->
+    <div class="col-updates">
+      <div class="sec-label"><div class="sq"></div> Updates</div>
+      <div class="upd-list">
+        <div class="up-item"><div class="up-dot"></div><span>Achieved <b>100% annual ideas target</b> by February &mdash; 2 ideas per employee, now exceeding the target.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span>Activated <b>registrations@sobharealty.com</b> for all customer communications.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span>Implemented <b>consolidated report</b> for all registration processes, transactions &amp; payments.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>Reconciliation &amp; audit</b> for all Sobha projects &mdash; <b>33,511 units</b>.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>Resale unit reconciliation</b> with CRM (2025&ndash;2026).</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>Site Visits</b> for Completed and Off-Plan Projects.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>External audit</b> &mdash; workplace &amp; environmental compliance, following up with 3 companies.</span></div>
+      </div>
+    </div>
+
+    <!-- COLUMN 3: In Progress -->
+    <div class="col-progress">
+      <div class="sec-label"><div class="sq"></div> Other Key Highlights</div>
+
+      <div class="upd-list">
+        <div class="up-item"><div class="up-dot"></div><span>Achieved <b>100% of annual ideas target</b> by February &mdash; now exceeding the target.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span>Activated <b>registrations@sobharealty.com</b> for all customer communications.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span>Implemented <b>consolidated report</b> for registrations, transactions &amp; payments.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>Reconciliation &amp; audit</b> for all Sobha projects (<b>33,511 units</b>).</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>Site Visits</b> for Completed &amp; Off-Plan Projects.</span></div>
+        <div class="up-item"><div class="up-dot"></div><span><b>External audit</b> &mdash; environmental compliance, following up with 3 companies.</span></div>
+      </div>
+
+      <div class="sec-label" style="margin-top:1mm;"><div class="sq"></div> In Progress</div>
+      <div class="prog-list">
+        <div class="p-item">
+          <div class="p-top">
+            <div class="p-name">Multilingual Customer Handbook</div>
+            <div class="p-pct">90%</div>
+          </div>
+          <div class="p-track"><div class="p-fill" style="width:90%"></div></div>
+        </div>
+        <div class="p-item">
+          <div class="p-top">
+            <div class="p-name">RVS Complaint Tracker</div>
+            <div class="p-pct">90%</div>
+          </div>
+          <div class="p-track"><div class="p-fill" style="width:90%"></div></div>
+        </div>
+        <div class="p-item">
+          <div class="p-top">
+            <div class="p-name">Live Escalation Matrices</div>
+            <div class="p-pct">60%</div>
+          </div>
+          <div class="p-track"><div class="p-fill" style="width:60%"></div></div>
+          <div class="p-note">Awaiting info from stakeholders</div>
+        </div>
+        <div class="p-item">
+          <div class="p-top">
+            <div class="p-name">Resale via ONE Sobha App</div>
+            <div class="p-pct">60%</div>
+          </div>
+          <div class="p-track"><div class="p-fill" style="width:60%"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="ftr">
+    <span>SOBHA Realty &bull; Registrations Team &bull; Executive Registrations &bull; Registration / DLD</span>
+    <span>Highlights &mdash; February 2026 &bull; Internal Use Only</span>
+  </div>
+</div>
+
+</body>
+</html>
